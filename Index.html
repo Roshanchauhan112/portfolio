@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noimageindex">
+
+    <title>Jitendra Nishad || C.A.</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2874a6;
+            --accent: #d35400;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --border: #dee2e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .profile-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .profile-photo-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .employee-name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .designation {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .batch-number {
+            background-color: var(--accent);
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 60px;
+            color: rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+
+        .profile-body {
+            padding: 30px;
+        }
+
+        .info-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .info-label {
+            width: 150px;
+            font-weight: 500;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            flex-grow: 1;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid var(--border);
+            background-color: #f9f9f9;
+        }
+
+        @media (max-width: 768px) {
+            .profile-photo-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .employee-name {
+                font-size: 22px;
+            }
+
+            .designation {
+                font-size: 16px;
+            }
+
+            .info-row {
+                flex-direction: column;
+            }
+
+            .info-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-body {
+                padding: 20px 15px;
+            }
+
+            .profile-photo-container {
+                width: 100px;
+                height: 100px;
+                border-width: 3px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+        }
+
+        @media print {
+            body {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-photo-container">
+                <img src="image/jitendra.jpeg" alt="Jitendra Nishad Image" class="profile-photo">
+            </div>
+            <h1 class="employee-name">Jitendra Nishad</h1>
+            <p class="designation">Chartered Accountant</p>
+            <div class="batch-number">SJ13264</div>
+        </div>
+
+        <div class="profile-body">
+            <div class="info-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="info-row">
+                    <span class="info-label">Primary Address:</span>
+                    <span class="info-value">Village Sinduriya, Maharajganj, U.P. 273303, India</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Secondary Address:</span>
+                    <span class="info-value">Civil Line Lucknow, U.P. 226001, India</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone Number:</span>
+                    <span class="info-value">+91 8858764872 (Mobile), 01456789 (Office)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">Jitendranishad581@gmail.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Dob:</span>
+                    <span class="info-value">12 Aug 1994</span>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2 class="section-title">Service Information</h2>
+                <div class="info-row">
+                    <span class="info-label">Education:</span>
+                    <span class="info-value">B.COM., M.COM., Ph.D. (Accounting Portal)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Rank:</span>
+                    <span class="info-value">508/600 (AIR 1)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Current Posting:</span>
+                    <span class="info-value">Civil Line Lucknow, U.P. 226001, India</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Date of Joining:</span>
+                    <span class="info-value">15th July 2016</span>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2 class="section-title">Administrative Details</h2>
+                <div class="info-row">
+                    <span class="info-label">Pay Scale:</span>
+                    <span class="info-value">Level 13 (₹1,23,100 - ₹2,15,900)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Current Basic Pay:</span>
+                    <span class="info-value">₹1,82,200/-</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Reporting To:</span>
+                    <span class="info-value">Chartered Accountant</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            A certified professional authorized to provide accounting, auditing, and tax services. Unauthorized use of
+            this ID is prohibited under Section 12 of the Official Secrets Act.
+        </div>
+        <div class="watermark">Jitendra Nishad</div>
+
+    </div>
+
+    <script>
+        getWindow().setFlags(LayoutParams.FLAG_SECURE, LayoutParams.FLAG_SECURE);
+
+        // Disable right-click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable copy shortcut
+        document.addEventListener('copy', function (e) {
+            e.preventDefault();
+            alert('Copying is disabled on this page.');
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', event => event.preventDefault());
+    </script>
+    <script>
+        document.addEventListener('keyup', function (e) {
+            if (e.key === 'PrintScreen') {
+                alert("Screenshot is disabled!");
+                document.body.style.filter = "blur(8px)";
+                setTimeout(() => {
+                    document.body.style.filter = "none";
+                }, 1000);
+            }
+        });
+
+        // Clipboard overwrite on copy
+        navigator.clipboard.writeText("Screenshot disabled by owner.");
+    </script>
+
+</body>
+
+</html>
